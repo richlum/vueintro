@@ -1,19 +1,5 @@
-Vue.component('todo-item', {
-  props: ['todo'],
-  template: '<li>{{ todo.text }}</li>'
-})
+import app from './grocerylist.js'
+import cntr from './counter.js'
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'component app',
-    groceryList: [
-      { id: 0, text: 'Vegetables' },
-      { id: 1, text: 'Cheese' },
-      { id: 2, text: 'Other junk' }
-    ]
-  }
-})
 
-export default app
 

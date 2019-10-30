@@ -5,14 +5,22 @@
   </head>
   <body>
     <div id="app"/>
-      <ol>
+      <span>{{ message }} </span>
+      <ul>
         <todo-item 
           v-for="item in groceryList"
           v-bind:todo="item"
           v-bind:key="item.id"
         ></todo-item>
-      </ol>
+      </ul>
     </div>
+
+    <div id="button-counter">
+      <button v-on:click="counter += 1"> Add One</button>
+      <button v-on:click="counter -= 1"> Remove One</button>
+      <p> The button has been clicked {{ counter }} time.</p>
+    </div>
+
   </body>
   <script src="main.js" type="module"></script>
 </html>

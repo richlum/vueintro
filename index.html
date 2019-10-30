@@ -1,20 +1,28 @@
 <html>
   <head>
     My Head
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script type="module">import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.esm.browser.js'</script> 
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
+    <!--<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.runtime.esm.js'></script>  -->
+    
   </head>
   <body>
     My Body
+    <p>--- App1</p>
     <div id="app">{{ message }}</div>
 
+    <p>--- App2</p>
     <div id="app-2">
       <span v-bind:title="message"> Hover message </span>
     </div>
 
+    <p>--- App3</p>
     <div id="app-3">
       <span v-if="seen">Now you see me</span>
     </div>
 
+    <p>--- App4</p>
     <div id="app-4">
       <ol>
         <li v-for="todo in todos">
@@ -23,12 +31,13 @@
       </ol>
     </div>
 
+    <p>--- App5</p>
     <div id="app-5">
       <p>{{ message }}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
 
-    <div id="app-6">
+    <p>--- App6</p> <div id="app-6">
       <p> {{ message }} </p>
       <input v-model="message">
     </div>
