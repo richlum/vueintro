@@ -1,6 +1,7 @@
 
-
+//this is a global registration of component
 Vue.component('button-counter',{
+    // must be function for private copy of counter in each instance
     data: function(){
         return {
             count: 0
@@ -11,7 +12,7 @@ Vue.component('button-counter',{
 
 const base = new Vue({
     el: '#app',
-    template: '<button-counter></button-counter>'
+    template: '<div><button-counter></button-counter><button-counter></button-counter></div>'
 });
 
 export default base;
