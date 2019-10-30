@@ -6,14 +6,23 @@ Vue.component('blog-post',{
 
 const posts = `
 <div>
-<blog-post title="My journey with Vue"></blog-post>
-<blog-post title="Blogging with Vue"></blog-post>
-<blog-post title="Vue is fun"></blog-post>
+<blog-post 
+    v-for="post in posts"
+    :key="post.id"
+    :title="post.title"
+></blog-post>
 </div>
 `;
 
 const blog = new Vue({
     el:'#app',
+    data:{
+        posts: [
+            {id:1,title:"My journey with Vue"},
+            {id:2,title:"Blogging with Vue"},
+            {id:3,title:"Vue is fun"}
+        ]
+    },
     template: posts
 });
 
